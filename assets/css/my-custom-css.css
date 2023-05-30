@@ -1,0 +1,20 @@
+body.carousel.customized-carousel .carousel-caption {
+    bottom: 27%;
+}
+
+body.carousel.customized-carousel .carousel-caption.text-left a.btn.btn-lg.btn-primary {
+    background: no-repeat;
+    border-color: #fc4c61;
+    border-radius: 0;
+    color: #fc4c61;
+}
+
+body.carousel.customized-carousel .carousel-indicators {
+    right: auto;
+    bottom: 104px;
+}
+
+body.carousel.customized-carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+}
