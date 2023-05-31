@@ -25,17 +25,17 @@ global $post;
             <main class="tab-container">
                 <input id="tab1" type="radio" name="tabs" checked>
                 <label for="tab1">Overview</label>
-                <input id="tab2" type="radio" name="tabs">
-                <label for="tab2">Future Bridge In News</label>
+                <!-- <input id="tab2" type="radio" name="tabs"> -->
+                <label for="tab2"><a href="<?php echo esc_url( home_url( '/' )); ?>newss" >Future Bridge In News</a></label>
 
                 <section id="content1">
                     <?php echo get_the_content($post->ID); ?>
                 </section>
 
-                <section id="content2">
-                    <?php get_template_part('template-parts/content-news'); ?>
+                <!-- <section id="content2">
+                    <?php //get_template_part('template-parts/content-news'); ?>
 
-                </section>
+                </section> -->
             </main>
         </div><!-- .entry-content -->
     </article>

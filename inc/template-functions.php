@@ -47,3 +47,11 @@ function dateDiffInDays($date1, $date2) {
       // 24 * 60 * 60 = 86400 seconds
       return abs(round($diff / 86400));
   }
+
+ /**
+ * Function to set limit for excerpt
+ */
+function futurebridge_excerpt_length($length) { 
+	return 30; 
+} 
+  add_filter('excerpt_length', 'futurebridge_excerpt_length');

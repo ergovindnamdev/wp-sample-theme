@@ -45,7 +45,7 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+	</div><!-- #main -->
 
 <?php
 get_sidebar();

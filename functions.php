@@ -143,6 +143,30 @@ function futurebridge_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Events Archives', 'futurebridge' ),
+			'id'            => 'event-archives',
+			'description'   => esc_html__( 'Add widgets here.', 'futurebridge' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'News Archives', 'futurebridge' ),
+			'id'            => 'news-archives',
+			'description'   => esc_html__( 'Add widgets here.', 'futurebridge' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'futurebridge_widgets_init' );
 
@@ -166,7 +190,7 @@ add_action( 'wp_enqueue_scripts', 'futurebridge_scripts' );
  */
 add_filter( 'body_class', 'custom_class' );
 function custom_class( $classes ) {
-	if ( is_front_page() ||  is_home() ||  is_post_type_archive('event') ) {
+	if ( is_front_page() ||  is_home() ||  is_post_type_archive('event') ||  is_post_type_archive('news') ) {
         $classes[] = 'front-page carousel customized-carousel';
     }
 	return $classes;
@@ -203,5 +227,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Customizer additions.
  */
 require get_template_directory() . '/inc/custom-post-types.php';
+
+
+/**
+ * Custom Archive Widget.
+ */
+require get_template_directory() . '/inc/custom-archive-widget.php';
+
 
 add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );

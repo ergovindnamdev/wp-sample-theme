@@ -82,6 +82,9 @@ $dayDiff = dateDiffInDays($event_date, date('Y-m-d'));
                         wp_kses_post(get_the_title())
                     )
                 );
+                ?>
+                <a class="read-more" href="<?php the_permalink(); ?>">Read More </a>
+                <?php
             endif;
 
 
